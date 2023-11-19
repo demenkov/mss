@@ -5,7 +5,7 @@ $db = $argv[2];
 $user = $argv[3];
 $pass = $argv[4];
 
-$dbh = new PDO("mysql:$host=localhost;dbname=$db", $user, $pass);
+$dbh = new PDO("mysql:host=$host;dbname=$db", $user, $pass);
 
 while (1) {
     $job = get_next_job($dbh);
